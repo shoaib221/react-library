@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { SignOut } from '../auth/auth';
 import { AuthContext } from '../auth/context';
 import './Nav.css';
+import { Theme } from './Theme';
 
 
 
@@ -43,7 +44,7 @@ export const Nav = () => {
     
 
     return (
-        <nav style={{ minHeight: '4rem' }} >
+        <nav className='flex min-h-[3rem]' >
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }} >
                 <img src='/logo1.jpg' style={{ height: '2rem' }} />
                 <span style={{ color: 'var(--color4)', fontWeight: '600' }} >SkillUp</span>
@@ -58,6 +59,7 @@ export const Nav = () => {
                     <div id='opener-1' className='button-1' >
                         <div onClick={()=> navigate('/profile')} className='button-1' >Profile</div>
                         <div onClick={ () => navigate('/') } className='button-1' >Home</div>
+                        <Theme />
                         <SignOut />
                     </div>
                 </button> :
@@ -66,6 +68,7 @@ export const Nav = () => {
                     Login
                 </button>
             }
+            
             
 
             
