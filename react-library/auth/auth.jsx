@@ -18,7 +18,6 @@ import { toast } from 'react-toastify';
 export const SignOut = () => {
     const { setUser, user } = useContext(AuthContext);
     
-
     function handle () {
         signOut(auth).then(() => {
             setUser(null);
@@ -38,20 +37,12 @@ export const SignOut = () => {
 
 const LogIn = ({toggle}) => {
     
-
-
     return (
         <div className='cen-item' >
             <EmailLogin />
-            
             <div>
                 Do not have an account ? <span onClick={toggle} className='link-1' >Register</span>
             </div>
-
-            
-
-            
-            
         </div>
     )
 }
